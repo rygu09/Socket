@@ -18,11 +18,11 @@ public class ServerThread extends Thread{
 	}
 	@Override
 	public void run() {
-		System.out.println("建立连接");
+		System.out.println("鍜屽鎴风鍙栧緱杩炴帴");
 		try {
 			bufferedReader=new BufferedReader(new InputStreamReader(client.getInputStream()));
 			bufferedWriter=new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-			System.out.println("收到 "+bufferedReader.readLine());
+			System.out.println("脢脮碌陆 "+bufferedReader.readLine());
 			String msg="echo "+bufferedReader.readLine();
 			bufferedWriter.write(msg);
 			bufferedWriter.flush();
