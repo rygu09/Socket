@@ -22,7 +22,7 @@ public class ServerThread extends Thread{
 		try {
 			bufferedReader=new BufferedReader(new InputStreamReader(client.getInputStream()));
 			bufferedWriter=new BufferedWriter(new OutputStreamWriter(client.getOutputStream()));
-			System.out.println("ÊÕµ½ "+bufferedReader.readLine());
+			System.out.println("接收 "+bufferedReader.readLine());
 			String msg="echo "+bufferedReader.readLine();
 			bufferedWriter.write(msg);
 			bufferedWriter.flush();
